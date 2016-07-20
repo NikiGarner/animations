@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.go a{
+  position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 1.35em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+//Animation
+.go a:before,
+.go a:after {
+  display: inline-block;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+//Left Bracket
+.go a:before {
+  margin-right: 10px;
+    content: '[';
+    transform: translate(20px);
+}
+
+//Right Bracket
+.go a:after {
+    margin-left: 10px;
+    content: ']';
+    transform: translate(-20px);
+}
+
+//Hover Functionality
+.go a:hover:before,
+.go a:hover:after,
+.go a:focus:before,
+.go a:focus:after {
+    opacity: 1;
+    transform: translate(0px);
+    transform: translate(0px);
+    transform: translate(0px);
+}
