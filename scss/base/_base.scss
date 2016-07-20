@@ -1,6 +1,13 @@
-.container {
+.wrapper {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
 }
 
 .go a{
@@ -47,4 +54,14 @@
     transform: translate(0px);
     transform: translate(0px);
     transform: translate(0px);
+}
+
+//Expand Selected
+.container {
+  transform:scale(1);
+  transition: transform .2s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(4);
 }
